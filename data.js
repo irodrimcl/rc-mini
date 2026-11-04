@@ -5,6 +5,7 @@ window.CATALOGO = {
     { id: "scx30", nombre: "Axial SCX30", escala: "1/30", prioridad: "principal" },
     { id: "fcx24", nombre: "FMS FCX24", escala: "1/24", prioridad: "principal" },
     { id: "fcx18", nombre: "FMS FCX18", escala: "1/18", prioridad: "secundaria" },
+    { id: "venture18", nombre: "HPI Venture18", escala: "1/18", prioridad: "principal" },
     { id: "scx24", nombre: "Axial SCX24", escala: "1/24", prioridad: "puntual" }
   ],
   modelos: [
@@ -22,13 +23,22 @@ window.CATALOGO = {
     { id: "fcx24m-tacoma-rojo", linea: "fcx24", nombre: "FCX24M Toyota Tacoma rojo", rtr: true, verificar: false },
     { id: "fcx24m-tacoma-azul", linea: "fcx24", nombre: "FCX24M Toyota Tacoma azul", rtr: true, verificar: false },
     { id: "fcx24m-camel", linea: "fcx24", nombre: "FCX24M Land Rover Camel Trophy", rtr: true, verificar: true, nota: "Fuentes difieren: Defender 90, Defender 110, Range Rover o Discovery" },
-    { id: "fcx24m-k5", linea: "fcx24", nombre: "Chevrolet K5", rtr: true, verificar: true, nota: "No apareció en las búsquedas; confirmar que existe en FCX24M" },
-    { id: "fcx24s-powerwagon", linea: "fcx24", nombre: "Power Wagon (FCX24S, opción económica)", rtr: true, verificar: false, nota: "Colores listados: azul, rojo, amarillo" },
+    { id: "fcx24-k5-brushed", linea: "fcx24", nombre: "FCX24 Chevrolet K5 Blazer brushed", rtr: true, verificar: false, nota: "Motion RC lo marca descontinuado: confirmar stock con el proveedor. Colores vistos: negro, café, azul, rojo, naranja" },
+    { id: "fcx24-k5-brushless", linea: "fcx24", nombre: "FCX24 Chevrolet K5 Blazer Pro brushless", rtr: true, verificar: false, nota: "Motor 1212 3200KV según OZRC. Descontinuado en algunos retailers" },
+    { id: "fcx24-powerwagon", linea: "fcx24", nombre: "FCX24 Power Wagon (opción económica)", rtr: true, verificar: true, nota: "FMS lo lista como FCX24S; colores azul, rojo, amarillo. Confirmar versión" },
 
     // FMS 1/18
-    { id: "fcx18ii-f100", linea: "fcx18", nombre: "FCX18 II Ford F-100", rtr: true, verificar: false, nota: "Versión escobillas y brushless" },
-    { id: "fcx18ii-bronco", linea: "fcx18", nombre: "FCX18 II Ford Bronco", rtr: true, verificar: true, nota: "Adelanto de septiembre 2026; confirmar disponibilidad" },
+    { id: "fcx18ii-f100-brushed", linea: "fcx18", nombre: "FCX18 II Ford F-100 brushed", rtr: true, verificar: false },
+    { id: "fcx18ii-f100-brushless", linea: "fcx18", nombre: "FCX18 II Ford F-100 brushless", rtr: true, verificar: false },
+    { id: "fcx18ii-bronco-brushed", linea: "fcx18", nombre: "FCX18 II Ford Bronco brushed", rtr: true, verificar: true, nota: "Adelanto de septiembre 2026; confirmar disponibilidad" },
+    { id: "fcx18ii-bronco-brushless", linea: "fcx18", nombre: "FCX18 II Ford Bronco brushless", rtr: true, verificar: true, nota: "Adelanto de septiembre 2026; confirmar disponibilidad" },
     { id: "fcx18-k10", linea: "fcx18", nombre: "FCX18 Chevrolet K10 V2", rtr: true, verificar: false },
+
+    // HPI Venture18, 1985 Toyota Hilux SR5
+    { id: "venture18-brushed-rojo", linea: "venture18", nombre: "Venture18 Hilux SR5 brushed rojo", sku: "160801", rtr: true, verificar: false },
+    { id: "venture18-brushed-negro", linea: "venture18", nombre: "Venture18 Hilux SR5 brushed negro", sku: "160800", rtr: true, verificar: false },
+    { id: "venture18-brushless-rojo", linea: "venture18", nombre: "Venture18 Flux Hilux SR5 brushless rojo", sku: "160803", rtr: true, verificar: false, nota: "Agotado en varios retailers" },
+    { id: "venture18-brushless-negro", linea: "venture18", nombre: "Venture18 Flux Hilux SR5 brushless negro", rtr: true, verificar: true, nota: "SKU por confirmar" },
 
     { id: "scx24-puntual", linea: "scx24", nombre: "SCX24 (modelos a definir)", rtr: true, verificar: true }
   ],
