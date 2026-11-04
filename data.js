@@ -17,18 +17,18 @@ window.CATALOGO = {
     { id: "scx30-k10", linea: "scx30", nombre: "Chevy K10", rtr: true, verificar: true },
     { id: "scx30-bronco", linea: "scx30", nombre: "Ford Bronco (anterior)", rtr: true, verificar: true },
 
-    { id: "fcx24m", linea: "fcx24", nombre: "FCX24M", rtr: true, verificar: true },
-    { id: "fcx24-tacoma-c1", linea: "fcx24", nombre: "Tacoma — color 1", rtr: true, verificar: true },
-    { id: "fcx24-tacoma-c2", linea: "fcx24", nombre: "Tacoma — color 2", rtr: true, verificar: true },
-    { id: "fcx24-tacoma-c3", linea: "fcx24", nombre: "Tacoma — color 3", rtr: true, verificar: true },
-    { id: "fcx24-defender", linea: "fcx24", nombre: "Land Rover Defender", rtr: true, verificar: true },
-    { id: "fcx24-camel", linea: "fcx24", nombre: "Land Rover Defender Camel Trophy", rtr: true, verificar: true },
-    { id: "fcx24-k5", linea: "fcx24", nombre: "Chevrolet K5", rtr: true, verificar: true },
-    { id: "fcx24-powerwagon", linea: "fcx24", nombre: "Power Wagon (opción económica)", rtr: true, verificar: true },
+    // FMS 1/24 (fuentes: fmshobby.com y retailers). Variantes exactas por confirmar donde se indica.
+    { id: "fcx24m-tacoma-gris", linea: "fcx24", nombre: "FCX24M Toyota Tacoma gris", rtr: true, verificar: false },
+    { id: "fcx24m-tacoma-rojo", linea: "fcx24", nombre: "FCX24M Toyota Tacoma rojo", rtr: true, verificar: false },
+    { id: "fcx24m-tacoma-azul", linea: "fcx24", nombre: "FCX24M Toyota Tacoma azul", rtr: true, verificar: false },
+    { id: "fcx24m-camel", linea: "fcx24", nombre: "FCX24M Land Rover Camel Trophy", rtr: true, verificar: true, nota: "Fuentes difieren: Defender 90, Defender 110, Range Rover o Discovery" },
+    { id: "fcx24m-k5", linea: "fcx24", nombre: "Chevrolet K5", rtr: true, verificar: true, nota: "No apareció en las búsquedas; confirmar que existe en FCX24M" },
+    { id: "fcx24s-powerwagon", linea: "fcx24", nombre: "Power Wagon (FCX24S, opción económica)", rtr: true, verificar: false, nota: "Colores listados: azul, rojo, amarillo" },
 
-    { id: "fcx18-bronco", linea: "fcx18", nombre: "Ford Bronco", rtr: true, verificar: true },
-    { id: "fcx18-f100", linea: "fcx18", nombre: "Ford F100", rtr: true, verificar: true },
-    { id: "fcx18-chevy", linea: "fcx18", nombre: "Chevy", rtr: true, verificar: true },
+    // FMS 1/18
+    { id: "fcx18ii-f100", linea: "fcx18", nombre: "FCX18 II Ford F-100", rtr: true, verificar: false, nota: "Versión escobillas y brushless" },
+    { id: "fcx18ii-bronco", linea: "fcx18", nombre: "FCX18 II Ford Bronco", rtr: true, verificar: true, nota: "Adelanto de septiembre 2026; confirmar disponibilidad" },
+    { id: "fcx18-k10", linea: "fcx18", nombre: "FCX18 Chevrolet K10 V2", rtr: true, verificar: false },
 
     { id: "scx24-puntual", linea: "scx24", nombre: "SCX24 (modelos a definir)", rtr: true, verificar: true }
   ],
