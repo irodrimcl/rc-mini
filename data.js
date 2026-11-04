@@ -8,13 +8,14 @@ window.CATALOGO = {
     { id: "scx24", nombre: "Axial SCX24", escala: "1/24", prioridad: "puntual" }
   ],
   modelos: [
-    // SCX30: nombres y versiones exactas por confirmar
-    { id: "scx30-jeep-1", linea: "scx30", nombre: "Jeep (versión 1)", rtr: true, verificar: true },
-    { id: "scx30-jeep-2", linea: "scx30", nombre: "Jeep (versión 2)", rtr: true, verificar: true },
-    { id: "scx30-jeep-3", linea: "scx30", nombre: "Jeep (versión 3)", rtr: true, verificar: true },
-    { id: "scx30-tacoma-1", linea: "scx30", nombre: "Tacoma (versión 1)", rtr: true, verificar: true },
-    { id: "scx30-tacoma-2", linea: "scx30", nombre: "Tacoma (versión 2)", rtr: true, verificar: true },
-    { id: "scx30-bronco", linea: "scx30", nombre: "Bronco (anterior)", rtr: true, verificar: true },
+    // SCX30 (fuentes: Horizon Hobby, RC Car Action, AMain). Jeep: SKU exacto por confirmar.
+    { id: "scx30-cj7-verde", linea: "scx30", nombre: "Jeep CJ-7 verde", rtr: true, verificar: true },
+    { id: "scx30-cj7-amarillo", linea: "scx30", nombre: "Jeep CJ-7 amarillo (edición limitada, solo Horizon)", rtr: true, verificar: true },
+    { id: "scx30-cj7-rojo", linea: "scx30", nombre: "Jeep CJ-7 rojo (variante crawler)", rtr: true, verificar: true },
+    { id: "scx30-tacoma-verde", linea: "scx30", nombre: "Toyota Tacoma TRD Pro verde", sku: "AXI-3289T1", rtr: true, verificar: false },
+    { id: "scx30-tacoma-tan", linea: "scx30", nombre: "Toyota Tacoma TRD Pro Overland (Dark Earth)", sku: "AXI-3289T2", rtr: true, verificar: false },
+    { id: "scx30-k10", linea: "scx30", nombre: "Chevy K10", rtr: true, verificar: true },
+    { id: "scx30-bronco", linea: "scx30", nombre: "Ford Bronco (anterior)", rtr: true, verificar: true },
 
     { id: "fcx24m", linea: "fcx24", nombre: "FCX24M", rtr: true, verificar: true },
     { id: "fcx24-tacoma-c1", linea: "fcx24", nombre: "Tacoma — color 1", rtr: true, verificar: true },

@@ -46,7 +46,7 @@ function render(){
     const l=C.lineas.find(x=>x.id===m.linea),d=document.createElement("div");d.className="card";
     d.innerHTML=`<h3></h3><div class="tag"></div>${m.verificar?'<div class="warn">Nombre/versión por verificar</div>':""}`;
     d.querySelector("h3").textContent=m.nombre;
-    d.querySelector(".tag").textContent=`${l.nombre} · ${l.escala}${m.rtr?" · RTR":""}`;
+    d.querySelector(".tag").textContent=`${l.nombre} · ${l.escala}${m.rtr?" · RTR":""}${m.sku?" · "+m.sku:""}`;
     grid.appendChild(d);
   });
 }
