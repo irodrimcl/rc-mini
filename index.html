@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RC Mini Chile</title>
+<style>
+:root{--bg:#f6f5f1;--fg:#1b1b18;--mut:#6d6c64;--card:#fff;--line:#dcdad0;--acc:#c2410c}
+@media (prefers-color-scheme:dark){:root{--bg:#161614;--fg:#eeede6;--mut:#a09f95;--card:#201f1c;--line:#35332e;--acc:#fb923c}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,sans-serif}
+main{max-width:960px;margin:0 auto;padding:24px 16px}
+h1{margin:0 0 4px}p.sub{color:var(--mut);margin:0 0 20px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+button{border:1px solid var(--line);background:var(--card);color:var(--fg);padding:8px 14px;border-radius:999px;cursor:pointer;font:inherit}
+button[aria-pressed=true]{background:var(--acc);border-color:var(--acc);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+.card h3{margin:0 0 4px;font-size:1rem}.tag{font-size:.8rem;color:var(--mut)}
+.warn{color:var(--acc);font-size:.8rem}
+h2{margin:28px 0 8px}
+.cats{display:flex;flex-wrap:wrap;gap:8px}.cats span{border:1px solid var(--line);border-radius:8px;padding:4px 10px;background:var(--card)}
+</style>
+</head>
+<body>
+<main>
+<h1>RC Mini Chile</h1>
+<p class="sub">Crawlers a escala mini RTR, repuestos y upgrades. Catálogo en construcción.</p>
+<div class="tabs" id="tabs"></div>
+<div class="grid" id="grid"></div>
+<h2>Repuestos y upgrades</h2>
+<p class="tag">La tabla de compatibilidad por pieza se llena a medida que cada una se prueba.</p>
+<div class="cats" id="cats"></div>
+</main>
+<script src="data.js"></script>
+<script>
+const C=window.CATALOGO;let sel="todas";
+const tabs=document.getElementById("tabs"),grid=document.getElementById("grid");
+function render(){
+  tabs.innerHTML="";
+  [{id:"todas",nombre:"Todas"},...C.lineas].forEach(l=>{
+    const b=document.createElement("button");b.textContent=l.nombre+(l.escala?" · "+l.escala:"");
+    b.setAttribute("aria-pressed",sel===l.id);b.onclick=()=>{sel=l.id;render()};tabs.appendChild(b);
+  });
+  grid.innerHTML="";
+  C.modelos.filter(m=>sel==="todas"||m.linea===sel).forEach(m=>{
+    const l=C.lineas.find(x=>x.id===m.linea),d=document.createElement("div");d.className="card";
+    d.innerHTML=`<h3></h3><div class="tag"></div>${m.verificar?'<div class="warn">Nombre/versión por verificar</div>':""}`;
+    d.querySelector("h3").textContent=m.nombre;
+    d.querySelector(".tag").textContent=`${l.nombre} · ${l.escala}${m.rtr?" · RTR":""}`;
+    grid.appendChild(d);
+  });
+}
+render();
+const cats=document.getElementById("cats");
+C.categoriasRepuestos.forEach(c=>{const s=document.createElement("span");s.textContent=c;cats.appendChild(s)});
+</script>
+</body>
+</html>
